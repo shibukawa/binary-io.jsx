@@ -1,0 +1,42 @@
+{
+  "name": "binary-io.jsx",
+  "version": "0.1.0",
+  "description": "Data serialize/deserialize utility for JS/JSX/AMD/CommonJS",
+  "scripts": {
+    "build": "grunt build",
+    "test": "grunt test",
+    "doc": "grunt doc"
+  },
+  "engines" : { "node" : ">=0.8.0" },
+  "keywords": [
+    "jsx",
+    "altjs",
+    "lib",
+    "js",
+    "amd",
+    "commonjs",
+    "nodejs",
+    "browser"
+  ],
+  "main": "./lib/binary-io.jsx",
+  "homepage": "https://github.com/shibukawa/binary-io.jsx",
+  "bugs": {
+    "url": "https://github.com/shibukawa/binary-io.jsx/issues"
+  },
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib",
+    "test": "./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shibukawa/binary-io.jsx.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1",
+    "grunt-jsx": ">=0.1.5"
+  },
+  "author": "shibukawa",
+  "license": "MIT"
+}
