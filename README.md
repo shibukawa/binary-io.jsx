@@ -67,7 +67,7 @@ define(['binary-io.amd'], function (binary-io.jsx) {
 
 ```html
 <script src="binary-io.js}}" type="text/javascript"></script>
-<script type="text/javascript>
+<script type="text/javascript">
 window.onload = function () {
     var BinaryOutput = JSX.require("src/binary-io.js").BinaryOutput;
     var output = new BinaryOutput();
@@ -82,7 +82,7 @@ window.onload = function () {
 
 ```html
 <script src="binary-io.global.js}}" type="text/javascript"></script>
-<script type="text/javascript>
+<script type="text/javascript">
 window.onload = function () {
     var obj = new BinaryOutput();
     ...
@@ -177,9 +177,9 @@ quickly.
 * JSX includes optimizer. You don't have to write tricky unreadalbe code for speed.
 * You can use almost all JavaScript API as you know. Some functions become static class functions. See [reference](http://jsx.github.io/doc/stdlibref.html).
 
-To create development environment, call following command:
-
 ## Setup
+
+To create development environment, call following command:
 
 ```sh
 $ npm install
@@ -187,7 +187,7 @@ $ npm install
 
 ## Repository
 
-* Repository: git://github.com/shibukawa/binary-io.jsx.git
+* Repository: git@github.com:shibukawa/binary-io.jsx.git
 * Issues: https://github.com/shibukawa/binary-io.jsx/issues
 
 ## Run Test
