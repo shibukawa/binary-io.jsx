@@ -1,6 +1,6 @@
 import "console.jsx";
 
-class BinaryInput
+__export__ class BinaryInput
 {
     var _buffer : string;
     var _offset : int;
@@ -142,7 +142,7 @@ class BinaryInput
     }
 }
 
-class BinaryOutput
+__export__ class BinaryOutput
 {
     var _output : string;
 

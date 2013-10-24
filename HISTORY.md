@@ -1,6 +1,10 @@
 Change History
 =================
 
+## 0.2.1 (2013/10/24)
+
+* Add `__export__` flag to `BinaryInput` and `BinaryOutput`.
+
 ## 0.2.0 (2013/10/23)
 
 * Add binary compatibility with `binaryio.py` in [oktavia.py](https://github.com/shibukawa/oktavia.py).
