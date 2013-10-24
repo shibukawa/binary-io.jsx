@@ -12,6 +12,8 @@ Motivation
 This is a part of [Oktavia](http://oktavia.info). This code is created for serialize/desrialize search engine dictionary.
 Oktavia is a client side search engine. To realize that, this module packs data into string and compress a little.
 
+From 0.2, it became compatible with [oktavia.py](https://github.com/shibukawa/oktavia.py)'s `binaryio.py`.
+
 Code Example
 ---------------
 

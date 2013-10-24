@@ -13,7 +13,7 @@ class BinaryInput
 
     function load32bitNumber () : number
     {
-        return this._buffer.charCodeAt(this._offset++) * 65536 + this._buffer.charCodeAt(this._offset++);
+        return this._buffer.charCodeAt(this._offset++) + this._buffer.charCodeAt(this._offset++) * 65536;
     }
 
     function load16bitNumber () : int
@@ -153,12 +153,12 @@ class BinaryOutput
 
     function dump32bitNumber (num : number) : void
     {
-        this._output += String.fromCharCode(Math.floor(num / 65536)) + String.fromCharCode(num % 65536);
+        this._output += String.fromCharCode(num % 65536) + String.fromCharCode(Math.floor(num / 65536));
     }
 
     function convert32bitNumber (num : number) : string
     {
-        return String.fromCharCode(Math.floor(num / 65536)) + String.fromCharCode(num % 65536);
+        return String.fromCharCode(num % 65536) + String.fromCharCode(Math.floor(num / 65536));
     }
 
     function dump16bitNumber (num : int) : void

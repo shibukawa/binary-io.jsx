@@ -75,6 +75,13 @@ class _Test extends TestCase
         var result2 = input2.loadStringList();
         this.expect(result2[0]).toBe('\u1112');
         this.expect(result2[1]).toBe('\u1112');
+
+        var output3 = new BinaryOutput();
+        output3.dumpStringList(['', '']);
+        var input3 = new BinaryInput(output3.result());
+        var result3 = input3.loadStringList();
+        this.expect(result3[0]).toBe('');
+        this.expect(result3[1]).toBe('');
     }
 
     function test_string_list_map() : void
