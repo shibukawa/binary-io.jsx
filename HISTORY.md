@@ -1,6 +1,11 @@
 Change History
 =================
 
+## 0.2.2 (2013/10/24)
+
+* Add `convert16bitNumber` and `convertString` static methods to `BinaryOutput`.
+* Change `convert32bitNumber` to static.
+
 ## 0.2.1 (2013/10/24)
 
 * Add `__export__` flag to `BinaryInput` and `BinaryOutput`.

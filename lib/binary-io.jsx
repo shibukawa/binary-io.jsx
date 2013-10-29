@@ -156,7 +156,7 @@ __export__ class BinaryOutput
         this._output += String.fromCharCode(num % 65536) + String.fromCharCode(Math.floor(num / 65536));
     }
 
-    function convert32bitNumber (num : number) : string
+    static function convert32bitNumber (num : number) : string
     {
         return String.fromCharCode(num % 65536) + String.fromCharCode(Math.floor(num / 65536));
     }
@@ -166,8 +166,19 @@ __export__ class BinaryOutput
         this._output += String.fromCharCode(num % 65536);
     }
 
+    static function convert16bitNumber (num : int) : string
+    {
+        return String.fromCharCode(num % 65536);
+    }
+
     function dumpString (str : string) : void
     {
+        this._output += BinaryOutput.convertString(str);
+    }
+
+    static function convertString (str : string) : string
+    {
+        var result : string;
         if (str.length > 32768)
         {
             str = str.slice(0, 32768);
@@ -187,7 +198,7 @@ __export__ class BinaryOutput
         }
         if (compress)
         {
-            this.dump16bitNumber(length + 32768);
+            result = BinaryOutput.convert16bitNumber(length + 32768);
             for (var i = 0; i < length; i += 2)
             {
                 var bytes = charCodes[i];
@@ -195,14 +206,14 @@ __export__ class BinaryOutput
                 {
                     bytes += charCodes[i + 1] << 8;
                 }
-                this.dump16bitNumber(bytes);
+                result += BinaryOutput.convert16bitNumber(bytes);
             }
         }
         else
         {
-            this.dump16bitNumber(length);
-            this._output += str;
+            result = BinaryOutput.convert16bitNumber(length) + str;
         }
+        return result;
     }
 
     function dumpStringList (strList : string[]) : void
@@ -225,7 +236,7 @@ __export__ class BinaryOutput
             this.dumpStringList(strMap[key]);
             counter++;
         }
-        this._output = tmpOutput + this.convert32bitNumber(counter) + this._output;
+        this._output = tmpOutput + BinaryOutput.convert32bitNumber(counter) + this._output;
     }
 
     function dump32bitNumberList (array : number[]) : void
