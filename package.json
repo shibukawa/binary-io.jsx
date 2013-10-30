@@ -1,6 +1,6 @@
 {
   "name": "binary-io.jsx",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Data serialize/deserialize utility for JS/JSX/AMD/CommonJS",
   "scripts": {
     "build": "grunt build",

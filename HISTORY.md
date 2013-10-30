@@ -1,7 +1,12 @@
 Change History
 =================
 
-## 0.2.2 (2013/10/24)
+## 0.2.3 (2013/10/30)
+
+* Add `dumpRawString` to `BinaryOutput`.
+* Add extra constructor to `BinaryInput`.
+
+## 0.2.2 (2013/10/29)
 
 * Add `convert16bitNumber` and `convertString` static methods to `BinaryOutput`.
 * Change `convert32bitNumber` to static.

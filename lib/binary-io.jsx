@@ -11,6 +11,12 @@ __export__ class BinaryInput
         this._offset = 0;
     }
 
+    __noexport__ function constructor (buffer : string, offset : int)
+    {
+        this._buffer = buffer;
+        this._offset = offset;
+    }
+
     function load32bitNumber () : number
     {
         return this._buffer.charCodeAt(this._offset++) + this._buffer.charCodeAt(this._offset++) * 65536;
@@ -149,6 +155,11 @@ __export__ class BinaryOutput
     function constructor ()
     {
         this._output = '';
+    }
+
+    function dumpRawString (str : string) : void
+    {
+        this._output += str;
     }
 
     function dump32bitNumber (num : number) : void
