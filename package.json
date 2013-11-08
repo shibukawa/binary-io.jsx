@@ -18,14 +18,14 @@
     "nodejs",
     "browser"
   ],
-  "main": "./lib/binary-io.jsx",
+  "main": "./src/binary-io.jsx",
   "homepage": "https://github.com/shibukawa/binary-io.jsx",
   "bugs": {
     "url": "https://github.com/shibukawa/binary-io.jsx/issues"
   },
   "directories": {
     "doc": "./doc",
-    "lib": "./lib",
+    "lib": "./src",
     "test": "./test"
   },
   "repository": {
