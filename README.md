@@ -1,6 +1,8 @@
 binary-io.jsx
 ===========================================
 
+[![Build Status](https://travis-ci.org/shibukawa/binary-io.jsx.png)](https://travis-ci.org/shibukawa/binary-io.jsx)
+
 Synopsis
 ---------------
 
@@ -98,6 +100,25 @@ Installation
 ```sh
 $ npm install binary-io.jsx
 ```
+
+If you want to use this library from other JSX project, install like the following:
+
+```sh
+$ npm install {{& name}} --save-dev
+```
+
+or add like these lines to your parent project's `package.json`:
+
+```js
+   devDependencies: {
+       "binary-io.jsx": "~0.3.0"
+   },
+   peerDepenencies: {
+       "binary-io.jsx": "~0.3.0"
+   }
+```
+
+And add `node_modules/binary-io.jsx/src` as a search path.
 
 API Reference
 ------------------
