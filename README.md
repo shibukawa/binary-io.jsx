@@ -104,7 +104,7 @@ $ npm install binary-io.jsx
 If you want to use this library from other JSX project, install like the following:
 
 ```sh
-$ npm install {{& name}} --save-dev
+$ npm install binary-io.jsx --save-dev
 ```
 
 or add like these lines to your parent project's `package.json`:
